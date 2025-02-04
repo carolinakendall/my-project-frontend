@@ -1,0 +1,55 @@
+.container {
+    background-color: rgba(227,247,254,255); 
+    height: 100vh; 
+    width: 100%;
+    position: relative;
+    overflow: hidden; 
+}
+
+.head-image {
+    position: absolute;   
+     bottom: 0;          
+     right: 0;          
+     width: 70%; 
+    height: auto; 
+}
+
+h1 {
+    top: 0%; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    font-size: 32px;
+    color: black; 
+}
+
+p {
+    top: 20%; 
+    left: 30%; 
+    transform: translateX(-50%); 
+    font-size: 15px;
+    color: rgba(119, 121, 122, 0.591); 
+}
+
+p:nth-child(1) {
+    top: 25%; 
+    left: 30%; 
+  }
+
+.noose-btn {
+    top: 60%;   
+    left: 60%;  
+    width: 30px;  
+    height: 80px;  
+}
+
+.btn {
+    position: absolute; 
+    background-color: transparent;  
+    border: none;                  
+    padding: 10px 20px;             
+    z-index: 11;
+}
+  
+  .btn:hover {
+    background-color: rgba(38, 37, 37, 0.1); 
+  }

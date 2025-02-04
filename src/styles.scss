@@ -1,1 +1,32 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Lora&family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+h1 {
+  position: absolute; /* Position text over the image */
+  top: 25%; /* Position vertically centered */
+  left: 50%; /* Position horizontally centered */
+  transform: translateX(-50%); /* Adjust for exact centering */
+  font-family: 'Montserrat', sans-serif;
+  font-size: 50px;
+  color: #2c3e50;
+}
+p {
+  position: absolute; /* Position text over the image */
+  top: 40%; /* Position vertically centered */
+  left: 50%; /* Position horizontally centered */
+  transform: translateX(-50%); /* Adjust for exact centering */
+  font-family: 'Noto', sans-serif;
+  font-size: 25px;
+  color: #34495e;
+  line-height: 2;
+}
+
+header {
+  position: fixed;  /* Keeps it at the top even when scrolling */
+  width: 100%;  /* Ensures it spans across the screen */
+  z-index: 1000; /* Higher than other elements */
+}
+
+
+
+  

@@ -1,0 +1,24 @@
+<div class="container">
+
+    <img src="assets/head-image.jpeg" alt="Head cannot be loaded" class="head-image">
+    <button class="btn noose-btn" (click)="callMyApi()"></button> 
+
+    <div *ngIf="myApiData">
+      <p>My API response to noose concerns: {{ myApiData | json }}</p>
+    </div>
+
+    <div *ngIf="epidemicData; else loading">
+    <p>from which, today: {{ epidemicData.todayCases }}</p>
+    <p>COVID active cases: {{ epidemicData.active }}</p>
+    </div>
+
+  <ng-template #loading>
+    <p>Loading data...</p>
+  </ng-template>
+
+  <div *ngIf="error">
+    <p>{{ error }}</p>
+  </div>
+   
+</div>
+  

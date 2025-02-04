@@ -1,0 +1,57 @@
+.container {
+    text-align: center;
+    height: 100vh; 
+    background-color: rgb(204,213,226); 
+  }
+
+  p {
+    position: fixed;  /* Keeps it at the top even when scrolling */
+    top:13%;
+  }
+
+  .image-container {
+    background-color: rgb(204,213,226); 
+  }
+
+  .body-image {
+    bottom: 0;
+    width: 500px; 
+    height: 900px; 
+    max-width: 800px;
+  }
+  
+  .head-btn {
+    top: 70%;   
+    left: 30%;  
+    width: 200px;  
+    height: 100px;  
+}
+  
+  .chest-btn {
+    top: 90%;   
+    left: 30%;  
+    width: 200px;  
+    height: 100px;  
+}
+  
+.stomach-btn {
+    top: 110%;   
+    left: 30%;  
+    width: 200px;  
+    height: 100px;  
+}
+
+.btn {
+    position: absolute;
+    background-color: transparent;  
+    border: none;                   
+    padding: 10px 20px;             
+    cursor: pointer;               
+    transition: background-color 0.3s ease; 
+  }
+  
+  .btn:hover {
+    background-color: rgba(0, 0, 0, 0.1); 
+  }
+  
+  
