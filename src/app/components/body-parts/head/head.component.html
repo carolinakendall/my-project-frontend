@@ -1,24 +1,64 @@
 <div class="container">
 
     <img src="assets/head-image.jpeg" alt="Head cannot be loaded" class="head-image">
-    <button class="btn noose-btn" (click)="callMyApi()"></button> 
-
-    <div *ngIf="myApiData">
-      <p>My API response to noose concerns: {{ myApiData | json }}</p>
-    </div>
-
+    
     <div *ngIf="epidemicData; else loading">
-    <p>from which, today: {{ epidemicData.todayCases }}</p>
-    <p>COVID active cases: {{ epidemicData.active }}</p>
+    <p class="covid">COVID active cases: {{ epidemicData.active }}</p>
     </div>
-
   <ng-template #loading>
-    <p>Loading data...</p>
+    <p class="covid">Loading data...</p>
   </ng-template>
-
   <div *ngIf="error">
-    <p>{{ error }}</p>
+    <p class="covid">{{ error }}</p>
   </div>
    
+<div *ngIf="successMessage" class="success-message">
+  <p>{{ successMessage }}</p>
+</div>
+
+  <form [formGroup]="recipeForm" (ngSubmit)="createRecipe()">
+    <label>Recipe Name:</label>
+    <input type="text" formControlName="name">
+  
+    <div formArrayName="ingredients">
+      <div *ngFor="let ingredient of ingredients.controls; let i = index" [formGroupName]="i">
+        <label>Ingredient Name:</label>
+        <input type="text" formControlName="name">
+        <label>Quantity:</label>
+        <input type="number" formControlName="quantity">
+        <button type="button"  class= "btn" (click)="removeIngredient(i)">Remove</button>
+      </div>
+    </div>
+  
+    <button type="button" class= "btn" (click)="addIngredient()">Add Ingredient</button>
+    <button type="submit"  class= "btn" >Create Recipe</button>
+    <button type="recipes"  class= "btn" (click)="getAllRecipes()">Show recipes</button> 
+
+  </form>
+  
+  <div *ngIf="myApiData && myApiData.length > 0">
+    <div class="recipesDiv">
+      <p class="recipesTitle" >All recipes:</p>
+      <ul>
+        <li *ngFor="let recipe of myApiData">
+          <strong>Recipe Name:</strong> {{ recipe.name }}<br>
+          <p class="recipes">Ingredients:</p> 
+          <ul>
+            <li *ngFor="let ingredient of recipe.ingredients">
+              {{ ingredient.name }} : {{ ingredient.quantity }} drops
+            </li>
+          </ul>
+          <br>
+        </li>
+      </ul>
+    </div>
+    </div>
+  <div *ngIf="myApiData && myApiData.length === 0">
+    <p class="recipes">No recipes found.</p>
+  </div>
+  <div *ngIf="error">
+    <p class="recipes">{{ error }}</p>
+  </div>
+
 </div>
   

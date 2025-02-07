@@ -53,5 +53,16 @@
   .btn:hover {
     background-color: rgba(0, 0, 0, 0.1); 
   }
+
+  p {
+    position: absolute; /* Position text over the image */
+    top: 40%; /* Position vertically centered */
+    left: 50%; /* Position horizontally centered */
+    transform: translateX(-50%); /* Adjust for exact centering */
+    font-family: 'Noto', sans-serif;
+    font-size: 25px;
+    color: #34495e;
+    line-height: 2;
+  }
   
   

@@ -23,33 +23,82 @@ h1 {
 }
 
 p {
-    top: 20%; 
-    left: 30%; 
-    transform: translateX(-50%); 
-    font-size: 15px;
-    color: rgba(119, 121, 122, 0.591); 
+  font-family: 'Noto', sans-serif;
+  font-size: 15px;
+  color: #34495e;
+  margin: auto;
 }
 
-p:nth-child(1) {
-    top: 25%; 
-    left: 30%; 
+.recipesTitle {
+  font-size: 24px; /* Larger font size for the title */
+  font-weight: bold; /* Makes the title bold */
+  color: #0b0943; /* Dark text color */
+  margin-bottom: 15px; /* Space below the title */
+}
+
+.recipesDiv {
+  font-family: 'Gill Sans';
+  background-color: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  width: 200px; /* Adjust width as needed */
+  height: 400px; /* Fixed height */
+  overflow-y: auto; /* Enables vertical scrolling */
+  position: absolute; 
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-50%, -50%);
+  text-align: left;
+  display: flex;
+  flex-direction: column; /* Ensures the title stays at the top */
+}
+
+  .recipesDiv ul {
+    width: fit-content;
+    list-style-type: none;
+    margin: 0 auto; 
+    padding-left: 0; 
   }
 
-.noose-btn {
-    top: 60%;   
-    left: 60%;  
-    width: 30px;  
-    height: 80px;  
-}
+input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+
+form {
+    position: absolute;   
+    bottom: 0;          
+    left: 0;          
+    width: 100%; 
+    height: auto; 
+    max-width: 100px;
+    font-family: Arial;
+  }
 
 .btn {
-    position: absolute; 
-    background-color: transparent;  
-    border: none;                  
-    padding: 10px 20px;             
-    z-index: 11;
-}
+    padding: 10px 10px;
+    font-size: 12px;
+    background-color: #457da0;
+    color: white;
+    cursor: pointer;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
   
   .btn:hover {
-    background-color: rgba(38, 37, 37, 0.1); 
+    background-color: #a46c37;  
+    transform: scale(1.1);  
   }
+
+label {
+    font-size: 15px;
+    font-weight: bold;
+    color: #514b4b;             
+    background-color: transparent; 
+  }
+  
+  
